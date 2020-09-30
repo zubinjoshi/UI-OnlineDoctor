@@ -1,0 +1,84 @@
+<div class="row">
+  <div class="col-lg-12 col-md-12, col-sm-12" style="margin-top: 8%;">
+    <mat-horizontal-stepper linear #stepper>
+      <mat-step [stepControl]="secondFormGroup" [optional]="isOptional">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Verify Yourself</ng-template>
+          <p>
+          <mat-form-field>
+            <mat-label>Your Phone number</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="(91)-9999-99-99"
+                   required>
+          </mat-form-field>
+        </p>
+          <button mat-button >Send OTP</button>
+          <p>
+          <mat-form-field>
+            <mat-label> Your OTP number</mat-label>
+            <input matInput  placeholder="9999"
+                   required>
+          </mat-form-field>
+        </p>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+    
+          <ng-template matStepLabel>Select Specialities</ng-template>
+         
+          <mat-form-field>
+            <mat-label>For ?</mat-label>
+            <input matInput placeholder="Fever, headache, vomiting" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <app-specialities></app-specialities>
+          <app-matching-doctors></app-matching-doctors>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      
+    
+      <mat-step [stepControl]="frmGrpProfile" [optional]="isOptional">
+        <form [formGroup]="frmGrpProfile">
+          <ng-template matStepLabel>Add Profile</ng-template>
+          if you are already registered this will pull of your information to verify
+          <app-profile></app-profile>
+    
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    
+      <mat-step [stepControl]="frmGrppayment" [optional]="isOptional">
+        <form [formGroup]="frmGrppayment">
+          <ng-template matStepLabel>Payment </ng-template>
+          <app-payment></app-payment>
+    
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    
+      <mat-step>
+        <ng-template matStepLabel>Connect to Doctor</ng-template>
+        <p>This will have the module  for video chat.</p>
+        <app-videochat></app-videochat>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</div>
+

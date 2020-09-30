@@ -1,0 +1,49 @@
+<div class="container-fluid belowHeader" style="margin-top:10%;">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                </div>
+               
+            </div>
+
+
+            <div class="vertical-menu">
+                <a [routerLink]="['patientdashboard']">Dashbboard</a>
+                <a [routerLink]="['patientprofile']" >Update Profile</a>
+                <a [routerLink]="['bookappointment']">Appointment</a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="col-sm-10 col-lg-10 col-md-10">
+            <div class="topheader"> PATIENT DASHBOARD</div>
+
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 col-md-12">
+                    <div class="row">
+                        <div class="col-sm-4 col-lg-4 float-left">
+                            <img class="rounded" alt="100x100" src="../../../../assets/pt1.jpg"
+                                data-holder-rendered="true" height=100px width="100px">
+                        </div>
+                        <div class="col-sm-4 col-lg-4">
+                            <b>patient name </b>
+                            <h6>1908 address, city and state postalcode -11093 </h6>
+                        </div>
+                    </div>
+                  
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                <router-outlet></router-outlet>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="aboveFooter"></div>

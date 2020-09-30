@@ -1,0 +1,46 @@
+﻿
+<mat-card >
+    <mat-card-header>
+      <mat-card-title >Register</mat-card-title>
+    </mat-card-header>
+   
+
+    <form [formGroup] ="form"   class="example-form">
+      <mat-card-content>
+        <span>Register As :</span>
+        <p>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="Doctor">Doctor</mat-button-toggle>
+            <mat-button-toggle value="Hospital">Hospital</mat-button-toggle>
+            <mat-button-toggle value="Clinic">Clinic</mat-button-toggle>
+            <mat-button-toggle value="Business Partner">Business Partner</mat-button-toggle>
+          </mat-button-toggle-group>
+        </p>
+     
+                 
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name">
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="City">
+        </mat-form-field>
+
+        <p>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email">
+          </mat-form-field>
+    
+   
+       
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Phone">
+          </mat-form-field>
+          </p>
+      </mat-card-content>
+      <p>
+      <button  mat-raised-button color="warn"  >Call Me Back</button>
+    </p>
+    </form>
+  </mat-card>
+  <br><br><br>

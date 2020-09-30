@@ -1,0 +1,26 @@
+{
+    "data":[
+        {
+
+        "speciality":"General Physician",
+        "conditions":["Fever","Common Cold", "Back Pain", "Headache", "Allergy"],
+        "Image":"",
+        "Fees": "Rs 150"
+        },
+
+        {
+            "speciality":"Dermatology",
+            "conditions":["Acne","Pimples", "Rashes", "Chemical peels", "lotions and creams"],
+            "Image":"",
+            "Fees": "Rs 100"
+        },
+        {
+            "speciality":"Pediatrician",
+            "conditions":["Cold and cough","Fever", "Vomiting", "Ear problem", "Food Poisoning"],
+            "Image":"",
+            "Fees": "Rs 200"
+        }
+
+    ]
+
+}

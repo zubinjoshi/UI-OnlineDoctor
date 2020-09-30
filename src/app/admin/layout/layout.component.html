@@ -1,0 +1,31 @@
+
+   <div class="container belowHeader">
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+        <h4>Admin</h4>
+        <div class="vertical-menu">
+          <a href="#" class="active">Home</a>
+          <a [routerLink]="['/admin/dashboard']">Dashbboard</a>
+          <a [routerLink]="['/admin/doctorlist']">Doctors</a>
+          <a [routerLink]="['/admin/pharmacylist']">Pharmacy</a>
+          <a [routerLink]="['/admin/lablist']">Lab</a>
+          <a [routerLink]="['/admin/bplist']">Buisness Partners</a>
+          <a [routerLink]="['/admin/adminbilling']">Billing</a>
+        </div>
+
+                
+      </div>
+  
+      <div class="col-sm-10 col-lg-10 col-md-10">
+        <div class="topheader"> ADMIN DASHBOARD</div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 col-md-12">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+        
+          </div>
+  
+</div>
+
+<div class="aboveFooter"></div>
